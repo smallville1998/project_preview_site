@@ -1,0 +1,53 @@
+@import './color';
+@import './variable';
+
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+ .ind {
+                background-color: back;
+            }
+
+ul {
+    padding: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+@mixin background-setting {
+    background-size: cover;;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin align-item($direction) {
+    display: flex;
+    justify-content: $direction;
+    align-items: center;
+}
+
+@mixin large-font {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@mixin snap-show {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+
+}
+
+
