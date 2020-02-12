@@ -3,12 +3,18 @@
 @import './variable';
 
 
+
+
 body {
     font-family: 'Montserrat', sans-serif;
+
+   
 }
 
 .container {
     margin: 0 auto;
+    max-width: 1000px;
+    padding: 0;
 }
 
 .active {
@@ -16,36 +22,115 @@ body {
     padding: 3px 10px;
 }
 
+.align-item {
+    @include align-item(space-between);
+}
 
+
+.hide_scroll{
+    max-height: 240px;
+    overflow: hidden;
+}
+
+.hide_scroll_friends{
+    max-height: 290px;
+    overflow: hidden;
+}
 // main background styling
 .main {
     width: 100%;
-    height: 440px;
+    height: auto;
     background: url('/assert/img/Emerging-Placements-Designers.png');
     border-radius: 0px 0px 0px 50px;
     position: relative;
     @include background-setting;
     z-index: 1;
 
+    @include desktop {
+        border-radius: 0px 0px 0px 0px;
+
+    }
+
+
+
     &__overlay {
         width: 100%;
-        height: 440px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.76) 71.13%, rgba(65, 65, 65, 0.76) 93.02%);
+        height: auto;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.863) 71.13%, rgba(87, 87, 87, 0.801) 93.02%);
         border-radius: 0px 0px 0px 50px;
+
+        @include desktop {
+            border-radius: 0px 0px 0px 0px;
+
+        }
     }
 
 
     // header section
     & .header {
+       width: 100%;
+    //    background: white;
+       position: relative;
+       margin-bottom: 50px;
+
+        @include desktop {
+            padding:  0px;
+          
+           
+       }
+
+       .nav-len {
         padding: 15px 20px;
         @include align-item(space-between);
-        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @include desktop {
+            padding:  15px 0px;
+       }
+
+       .header__navlinks {
+           display:none;
+
+           @include desktop {
+           display:block;
+
+           .active-d {
+               border-bottom: 3px solid black;
+               padding-bottom: 4px;
+               color: black;
+           }
+
+           & ul {
+               display: flex;
+
+               & li {
+                   padding-right: 50px;
+
+                   a {
+                       font-weight: 600;
+                       transition: $transition;
+
+                       &:hover {
+                        color: black;
+                    }
+                   }
+               }
+           }
+       }
+
+       }
+    }
 
         &__nav {
 
             & span {
                 & .bar {
                     font-size: 30px;
+
+                    @include desktop {
+                        display: none;
+                    }
                 }
             }
 
@@ -60,10 +145,30 @@ body {
                 border-radius: 20px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+                @include tablet {
+                     width: 320px;
+
+                }
+
+                @include desktop {
+                    width: 400px;
+                    padding:9px 0               }
+
 
                 & input[type="text"] {
                    background: transparent;
                    border:none;
+
+                   @include tablet {
+                    width: 250px;
+
+               }
+               @include desktop {
+                width: 300px;
+                font-size: 15px;
+                color: $link-color
+            }
+
 
                 }
 
@@ -71,6 +176,15 @@ body {
                     font-size: 18px;
                     padding-left: 10px;
                     color: #000;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $link-color
+                    }
+
+                    @include desktop {
+                        margin-left: 15px;
+                    }
 
                 }
             }// header >> search
@@ -121,6 +235,7 @@ body {
                     color: $link-color;
                     font-weight: 600;
 
+                  
                 }
             }
         }
@@ -135,6 +250,16 @@ body {
         padding: $m-padding;
         @include align-item(space-between);
 
+        
+
+        @include desktop {
+            padding: 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+
+       }
+
         &__details {
             line-height: 1.2em;
             h1 {
@@ -142,14 +267,26 @@ body {
                 font-size: 22px;
                 padding-bottom: 5px;
                 /* identical to box height */
+
+                @include tablet {
+                   font-size: 30px;
+               }
             }
             h3 {
                 font-weight: 500;
                 font-size: 12px;
+                @include tablet {
+                    font-size: 18px;
+                    padding-top: 8px;
+                }
             }
             h5 {
                 font-weight: bold;
                 font-size: 12px;
+
+                @include tablet {
+                    font-size: 15px;
+                }
             }
 
         }
@@ -164,6 +301,10 @@ body {
                 border-radius: 50%;
                 // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+                @include tablet {
+                    width: 80px;
+                    height: 80px;
+                }
             }
         }
     } // header >> detail
@@ -172,10 +313,18 @@ body {
     // indicator
     &__downlink {
         width: 100%;
-        padding: $m-padding ;
+        padding:12px 12px 20px 15px;
         @include align-item(space-between);
 
+        @include desktop {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            padding: 20px 0;
+       }
+
         & .indicators {
+            margin-left: 12px;
+
             & span {
                 // width: 2px;
                 // height: 2px;
@@ -198,6 +347,12 @@ body {
             font-weight: 600;
             font-size: 12px;
             padding: 6px 10px;
+            transition: $transition;
+
+            &:hover {
+                background: $link-color;
+                color: white;
+            }
         }
     }
 
@@ -215,21 +370,61 @@ body {
     margin-top: 15px;
     position: relative;
     padding: 0 10;
+   
 
     .slide-show {
         @include align-item(space-between);
         @include snap-show;
-    }
+        height: 500px;
+        align-items: flex-start;
+        position: relative;
+
+        
+
+        }
+
+        // .direction {
+        //     position: absolute;
+        //     // @include align-item(space-between)
+        //     background: red;
+        //     // position: absolute;
+        //     //   top: 50%;
+        //     //   bottom: 50%;
+        //     //   transform: translate(-50% -50%);
+        // }
+
+           & .left {
+            position: absolute;
+            top: 35%;
+            font-size: 40px;
+            left: 0;
+            text-shadow: 2px 2px 8px rgb(255, 255, 255);
+            cursor: pointer;
+           }
+
+           & .right {
+            position: absolute;
+            top: 35%;
+            font-size: 40px;
+            right: 0;
+            text-shadow: 2px 2px 8px rgb(255, 255, 255);
+            cursor: pointer;
+           }
+        
 
 
     & .slide {
         width:280px;
         height: 200px;
         position: relative;
-        background: red;
         border-radius: 12px;
         margin: 12px;
         scroll-snap-align: center;
+
+        @include desktop {
+            width: 340px;
+            height: 220px;
+        }
 
     
         & img {
@@ -238,6 +433,11 @@ body {
             border-radius: 12px;
             object-fit: cover;
             flex-grow: 1;
+
+            @include desktop {
+                width: 340px;
+                height: 220px;
+            }
         }
 
         &-text {
@@ -253,6 +453,11 @@ body {
             flex-grow: 1;
             // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.473);
 
+            @include desktop {
+                width: 340px;
+                height: 220px;
+            }
+
             & .top-link {
                 @include align-item(space-between);
 
@@ -263,6 +468,10 @@ body {
                     border-radius: 60px; 
                     padding: 3px 6px;
                     font-size: 14px;
+
+                    @include desktop {
+                        font-size: 20px;
+                    }
                 }
 
                 a {
@@ -272,6 +481,16 @@ body {
                     font-size: 12px;
                     padding: 2px 8px;
                     font-weight: 500;
+                    transition: 0.3s all ease-in-out;
+
+                    &:hover {
+                        background: $link-color;
+                        color: white;
+                    }
+
+                    @include desktop {
+                        font-size: 15px;
+                    }
                 }
             }
 
@@ -279,6 +498,13 @@ body {
                 text-align: center;
                 color: white;
                 margin-top: 50px;
+                text-shadow: 2px 2px 8px rgb(255, 255, 255);
+
+                @include desktop {
+                    margin-top: 50px;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
             }
 
             & .bottom-link {
@@ -291,6 +517,13 @@ body {
                 width: 100%;
                 color: #C4C4C4;
                 font-weight: 600;
+                transition: 0.5s ease-in-out;
+
+                
+
+                @include desktop {
+                    font-size: 15px;
+                }
 
                 .f-message {
 
@@ -303,6 +536,8 @@ body {
         }
         
     }
+
+   
 }
 
 
@@ -317,6 +552,11 @@ body {
     & h1 {
         @include large-font;
         padding: 0px 0px 7px 15px;
+
+        @include desktop {
+            padding: 0px 0px 7px 0px;
+        }
+
     }
 
     &__section-links {
@@ -325,23 +565,47 @@ body {
         height: 100px;        
         position: relative;
 
+        @include desktop {
+            border-radius: 0px 0px 0px 0px;
+
+        }
+
+        
 
           & .link-w {
-            position: absolute;
-            top: 0;
-            left: 0;
-            @include align-item(space-between);
-            width: 100%;
-            padding: $m-padding;
+            position: relative;
+           
+
+            .align-links {
+                width: 100%;
+                padding: 12px 15px;
+                @include align-item(space-between);
+
+                @include desktop {
+                    padding: 12px 0px;
+        
+                }
+            }
+
 
             & a {
                 font-weight: 600;
                 font-size: 14px;
                 letter-spacing: .1em;
+                transition: $transition;
+
+                @include desktop {
+                    font-weight: 400;
+                font-size: 16px;
+                }
+                &:hover {
+                    color: black;
+                }
             }
 
             .link-active {
-                padding: 3px 10px;
+                padding: 3px 0px;
+                color: black;
                 border-bottom: 2px solid black;
             }
 
@@ -359,31 +623,44 @@ body {
             height: 244px;
             border-radius: 0px 50px 0px 0px;
 
+            @include desktop {
+                border-radius: 0px 0px 0px 0px;
+    
+            }
+           
+
             &-wrapper {
                 padding: 10px;
                 position: relative;
                 width: 100%;
                 height: auto;
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
                 grid-gap: 0px;
-                // flex-wrap: wrap;
-                // justify-content: space-between;
+               
+
+                @include desktop {
+                    grid-gap:16px;
+                }
+
+                @include tablet {
+                    // width: 300px;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+                }
 
                 & .content {
-                    // max-width:60%;
-                    height: 160px;
+                    height: 200px;
                     position: relative;
                     margin: 8px;
-                    // margin: 8px;
-                    // flex-grow: 1;
-
+                   
+                   
 
 
 
                     .project-img {
                         width: 100%;
-                        height: 160px;
+                        height: 200px;
                         border-radius: 12px;
                         object-fit: cover;
                         flex-grow: 1;
@@ -395,7 +672,7 @@ body {
                         border-radius: 12px;
                         // max-width: 100%;
                         width: 100%;
-                        height: 160px;
+                        height: 200px;
                         position: absolute;
                         top: 0;
                         border-radius: 12px;
@@ -465,15 +742,24 @@ body {
                 border: 1px solid #000000;
                 padding: 6px 12px;
                 font-size: 12px;
+                transition: $transition;
 
-               
+               &:hover {
+                   background: $link-color;
+                   color: white;
+               }
             }
            
             }
 
             // friend section styling
             .friends {
-                margin-top: 50px;
+                margin-top: 100px;
+
+                @include desktop {
+                    margin-top: 200px;
+
+                }
 
                 h3 {
                     font-weight: 600;
@@ -489,10 +775,11 @@ body {
                     line-height: 1.6em;
                 }
                 .fr-show {
+                    height: 500px;
                     @include snap-show;
                     @include align-item(space-between);
+                    align-items: flex-start;
                 }
-
                 .friends-container {
                     min-width: 230px;
                     height: auto;
@@ -502,8 +789,9 @@ body {
 
                     & img {
                         width: 100%;
+                        object-fit: cover;
                         height: 180px;
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        box-shadow : 0px 4px 4px rgba(0, 0, 0, 0.25);
 
                     }
 
@@ -631,14 +919,24 @@ body {
         display:flex;
         width: 100%;
 
+        @include desktop {
+            padding: 30px 15px;
+
+        }
 
         & img {
             max-width: 53px;
             object-fit: cover;
             height: 53px;
-            border: 3px solid #000;
+            border: 3px solid #fff;
             border-radius: 50%;
             // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+            @include desktop {
+                min-width: 70px;
+                height: 68px;
+            }
+        
         }
 
         &-text {

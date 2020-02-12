@@ -9,6 +9,7 @@
 a {
   color: #805353;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 .ind {

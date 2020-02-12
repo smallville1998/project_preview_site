@@ -17,19 +17,29 @@
 
     <header class="header">
         <!-- side bar in the mobile -->
-        <nav class="header__nav">
-            <span><i class="fa fa-bars bar"></i></span>
-            <div class="header__navlinks"></div>
-        </nav>
-
-           <!-- search input -->
-        <div class="header__search">
-             <input type="text" name="search" id="search" placeholder="Search...">
-             <a href="#"><i class="fa fa-search search-icon"></i></a>
+        <div class="nav-len">
+                <nav class="header__nav">
+                        <span><i class="fa fa-bars bar"></i></span>
+                        <div class="header__navlinks">
+                            <ul>
+                                <li><a class="active-d" href="#">Home</a></li>
+                                <li ><a href="#">Project</a></li>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Others</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+            
+                       <!-- search input -->
+                    <div class="header__search">
+                         <input type="text" name="search" id="search" placeholder="Search...">
+                         <a href="#"><i class="fa fa-search search-icon"></i></a>
+                    </div>
         </div>
+       
     </header>
 
-    <nav class="nav">
+    <nav class="nav ">
             <span class="close-btn"><i class="fa fa-close"></i></span>
 
             <div class="owner nav-profile">
@@ -52,7 +62,7 @@
     </nav>
 
     <!-- owner details -->
-    <div class="owner">
+    <div class="owner container">
         <div class="owner__details">
             <h1>John Ifemezuo</h1>
             <h3>UI/UX Designer And Frontend Developer</h3>
@@ -64,9 +74,12 @@
     </div>
 
 
-    <div class="bg-slide">
+    <div class="bg-slide container">
 
-        <div class="slide-show">
+        
+            <div class="hide_scroll">
+
+        <div class="slide-show container">
 
         <div class="slide">
             <img src="./assert/img/behance.png" alt="">
@@ -92,7 +105,7 @@
             </div>
         </div>
 
-        <div class="slide">
+        <div class="slide ">
                 <img src="./assert/img/behance.png" alt="">
                 <div class="slide-text">
                     <div class="top-link">
@@ -165,12 +178,18 @@
             </div>
 
 
-            </div><!---slide show-->
+              
+
+            </div>
+    </div>
+            <!---slide show-->
+            <span class="left"><i class="fa fa-chevron-circle-left"></i></span>
+            <span class="right"><i class="fa fa-chevron-circle-right"></i></span>
     </div>
 
 
     <!-- indictor section -->
-    <div class="main__downlink">
+    <div class="main__downlink container">
         
         <div class="indicators">
             <span class="ind"></span>
@@ -189,29 +208,32 @@
 </main><!--main-->
 
 
-<main class="body">
-    <h1>CATELOG</h1>
+<main class="body ">
+    <h1 class="container">CATELOG</h1>
 
-        <div class="body__section-links">
+        <div class="body__section-links ">
             <div class="link-w">
-                    <a href="#">Ui Design</a>
-                    <a href="#">Web Design</a>
-                    <a href="#" class="link-active">Project</a>
+                <div class="align-links container">
+                        <a href="#">Ui Design</a>
+                        <a href="#">Web Design</a>
+                        <a href="#" class="link-active">Project</a>
+                </div>
+                  
             </div>
         </div>
     
 
 
         <div class="body__content">
-            <div class="body__content-wrapper">
+            <div class="body__content-wrapper container">
 
                 <!-- project display-->
                 <div class="content">
-                    <img src="/assert/img/image-layout.png" alt="" class="project-img">
+                    <img src="./assert/img/image-layout.png" alt="" class="project-img">
 
                     <div class="content__text">
                         <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
+                            <img src="./assert/img/network.png" alt="">   
                             <span class="love-icon"><i class="fa fa-heart"></i></span>
                         </div>
                         <div class="bottom-text">
@@ -223,11 +245,11 @@
 
                 <!-- project display-->
                 <div class="content">
-                    <img src="/assert/img/calculator.png" alt="" class="project-img">
+                    <img src="./assert/img/calculator.png" alt="" class="project-img">
 
                     <div class="content__text">
                         <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
+                            <img src="./assert/img/network.png" alt="">   
                             <span class="love-icon"><i class="fa fa-heart"></i></span>
                         </div>
                         <div class="bottom-text">
@@ -239,11 +261,11 @@
 
                 <!-- project display-->
                 <div class="content">
-                    <img src="/assert/img/095b4089ddb2fb60ca6c63942f13b683.png" alt="" class="project-img">
+                    <img src="./assert/img/095b4089ddb2fb60ca6c63942f13b683.png" alt="" class="project-img">
 
                     <div class="content__text">
                         <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
+                            <img src="./assert/img/network.png" alt="">   
                             <span class="love-icon"><i class="fa fa-heart"></i></span>
                         </div>
                         <div class="bottom-text">
@@ -253,46 +275,28 @@
                     </div>
                 </div><!--project display-->
 
-                <!-- project display-->
                 <div class="content">
-                    <img src="/assert/img/gekaijoumenuopen.png" alt="" class="project-img">
-
-                    <div class="content__text">
-                        <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
-                            <span class="love-icon"><i class="fa fa-heart"></i></span>
+                        <img src="./assert/img/calculator.png" alt="" class="project-img">
+    
+                        <div class="content__text">
+                            <div class="top-icon">
+                                <img src="./assert/img/network.png" alt="">   
+                                <span class="love-icon"><i class="fa fa-heart"></i></span>
+                            </div>
+                            <div class="bottom-text">
+                                    <a href="#" class="p-link"><h3>Image Slide</h3></a>
+                               <i class="fa fa-clock-o"></i> <span> 15th December 2019</span>
+                            </div>
                         </div>
-                        <div class="bottom-text">
-                                <a href="#" class="p-link"><h3>Image Slide</h3></a>
-                           <i class="fa fa-clock-o"></i> <span> 15th December 2019</span>
-                        </div>
-                    </div>
-                </div><!--project display-->
-
-
-                <!-- project display-->
-                <div class="content">
-                    <img src="/assert/img/095b4089ddb2fb60ca6c63942f13b683.png" alt="" class="project-img">
-
-                    <div class="content__text">
-                        <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
-                            <span class="love-icon"><i class="fa fa-heart"></i></span>
-                        </div>
-                        <div class="bottom-text">
-                                <a href="#" class="p-link"><h3>Image Slide</h3></a>
-                           <i class="fa fa-clock-o"></i> <span> 15th December 2019</span>
-                        </div>
-                    </div>
-                </div><!--project display-->
+                    </div><!--project display-->
 
                 <!-- project display-->
                 <div class="content">
-                    <img src="/assert/img/gekaijoumenuopen.png" alt="" class="project-img">
+                    <img src="./assert/img/gekaijoumenuopen.png" alt="" class="project-img">
 
                     <div class="content__text">
                         <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
+                            <img src="./assert/img/network.png" alt="">   
                             <span class="love-icon"><i class="fa fa-heart"></i></span>
                         </div>
                         <div class="bottom-text">
@@ -305,11 +309,11 @@
 
                 <!-- project display-->
                 <div class="content">
-                    <img src="/assert/img/095b4089ddb2fb60ca6c63942f13b683.png" alt="" class="project-img">
+                    <img src="./assert/img/095b4089ddb2fb60ca6c63942f13b683.png" alt="" class="project-img">
 
                     <div class="content__text">
                         <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
+                            <img src="./assert/img/network.png" alt="">   
                             <span class="love-icon"><i class="fa fa-heart"></i></span>
                         </div>
                         <div class="bottom-text">
@@ -321,11 +325,44 @@
 
                 <!-- project display-->
                 <div class="content">
-                    <img src="/assert/img/gekaijoumenuopen.png" alt="" class="project-img">
+                    <img src="./assert/img/gekaijoumenuopen.png" alt="" class="project-img">
 
                     <div class="content__text">
                         <div class="top-icon">
-                            <img src="/assert/img/network.png" alt="">   
+                            <img src="./assert/img/network.png" alt="">   
+                            <span class="love-icon"><i class="fa fa-heart"></i></span>
+                        </div>
+                        <div class="bottom-text">
+                                <a href="#" class="p-link"><h3>Image Slide</h3></a>
+                           <i class="fa fa-clock-o"></i> <span> 15th December 2019</span>
+                        </div>
+                    </div>
+                </div><!--project display-->
+
+
+                <!-- project display-->
+                <div class="content">
+                    <img src="./assert/img/095b4089ddb2fb60ca6c63942f13b683.png" alt="" class="project-img">
+
+                    <div class="content__text">
+                        <div class="top-icon">
+                            <img src="./assert/img/network.png" alt="">   
+                            <span class="love-icon"><i class="fa fa-heart"></i></span>
+                        </div>
+                        <div class="bottom-text">
+                                <a href="#" class="p-link"><h3>Image Slide</h3></a>
+                           <i class="fa fa-clock-o"></i> <span> 15th December 2019</span>
+                        </div>
+                    </div>
+                </div><!--project display-->
+
+                <!-- project display-->
+                <div class="content">
+                    <img src="./assert/img/gekaijoumenuopen.png" alt="" class="project-img">
+
+                    <div class="content__text">
+                        <div class="top-icon">
+                            <img src="./assert/img/network.png" alt="">   
                             <span class="love-icon"><i class="fa fa-heart"></i></span>
                         </div>
                         <div class="bottom-text">
@@ -342,17 +379,29 @@
             </div>
 
             <!-- friends projec section -->
-            <div class="friends"> 
-                <h3>Tag friends</h3>   
-                <h1>Friends Design</h1>
+            <div class="friends container"> 
+                <div class="align-item">
+                    <div>
+                            <h3>Tag friends</h3>   
+                            <h1>Friends Design</h1>
+                    </div>
+                       
+        
+                        <div class="link-btn">
+                                <a href="#" class="link-btn">VIEW MORE</a>
+                        </div>
+                </div>
+               
+
+                <div class="hide_scroll_friends">
 
                 <div class="fr-show">
 
                     <div class="friends-container">
-                            <a  href="/assert/img/dribble.png" target="_blank"><img src="/assert/img/dribble.png" alt=""></a>
+                            <a  href="./assert/img/dribble.png" target="_blank"><img src="./assert/img/dribble.png" alt=""></a>
 
                         <div class="friends-text">
-                           <img src="/assert/img/IMG_20190828_123555.jpg" class="own-img" alt="">
+                           <img src="./assert/img/IMG_20190828_123555.jpg" class="own-img" alt="">
                             <div class="text">
                                 <h3><a href="#">liam Stiwold</a></h3>
                                 <h5>UI/UX Designer</h5>
@@ -362,10 +411,10 @@
 
 
                     <div class="friends-container">
-                            <a  href="/assert/img/dribble.png" target="_blank"><img src="/assert/img/dribble.png" alt=""></a>
+                            <a  href="./assert/img/dribble.png" target="_blank"><img src="./assert/img/dribble.png" alt=""></a>
     
                             <div class="friends-text">
-                                <img src="/assert/img/IMG_20190828_123555.jpg" alt="">
+                                <img src="./assert/img/IMG_20190828_123555.jpg" alt="">
                                 <div class="text">
                                     <h3><a href="#">liam Stiwold</a></h3>
                                     <h5>UI/UX Designer</h5>
@@ -375,11 +424,11 @@
 
 
                     <div class="friends-container">
-                            <a  href="/assert/img/dribble.png" target="_blank"><img src="/assert/img/dribble.png" alt=""></a>
+                            <a  href="./assert/img/dribble.png" target="_blank"><img src="./assert/img/dribble.png" alt=""></a>
                            
     
                             <div class="friends-text">
-                                <img src="/assert/img/IMG_20190828_123555.jpg" alt="">
+                                <img src="./assert/img/IMG_20190828_123555.jpg" alt="">
                                 <div class="text">
                                     <h3><a href="#">liam Stiwold</a></h3>
                                     <h5>UI/UX Designer</h5>
@@ -388,10 +437,10 @@
                         </div>
 
                         <div class="friends-container">
-                                <a  href="/assert/img/dribble.png" target="_blank"><img src="/assert/img/dribble.png" alt=""></a>
+                                <a  href="./assert/img/dribble.png" target="_blank"><img src="./assert/img/dribble.png" alt=""></a>
         
                                 <div class="friends-text">
-                                    <img src="/assert/img/IMG_20190828_123555.jpg" alt="">
+                                    <img src="./assert/img/IMG_20190828_123555.jpg" alt="">
                                     <div class="text">
                                             <h3><a href="#">liam Stiwold</a></h3>
                                         <h5>UI/UX Designer</h5>
@@ -402,7 +451,7 @@
                             
 
                 </div>
-                
+                </div>
                
             </div>
 
@@ -416,23 +465,23 @@
 
 
             <!-- connection -->
-            <div class="friends"> 
+            <div class="friends container"> 
                     <h3>connection</h3>   
                     <h1>Follow Me On</h1>
                     
-                <div class="f-content-wrapper ">
+                <a href="dribbble.com" target="__blank"><div class="f-content-wrapper ">
                     <div class="f-content">
                         <h2>Dribble.com</h2>
                         <p>Dribbble is a self-promotion and networking platform for digital designers.... </p>
                     </div>
-                </div>
+                </div></a>
 
-                <div class="f-content-wrapper behance">
+                <a href="behance.net" target="__blank"><div class="f-content-wrapper behance">
                     <div class="f-content ">
                         <h2>Behance.net</h2>
                         <p>Dribbble is a self-promotion and networking platform for digital designers.... </p>
                     </div>
-                </div>
+                </div></a>
     
             </div>
 
@@ -440,8 +489,8 @@
 
 <!-- footer section -->
 <footer class="footer">
-    <div class="footer__content">
-                    <img src="/assert/img/istockphoto-1045886560-612x612.jpg" alt="">
+    <div class="footer__content container">
+                    <img src="./assert/img/IMG_20190828_123555.jpg" alt="">
 
                 <div class="footer__content-text">
                     <h1>John Swiezhinger</h1>

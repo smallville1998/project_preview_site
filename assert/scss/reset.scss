@@ -12,6 +12,8 @@
 a {
     color: $link-color;
     text-decoration: none;
+    overflow-x: hidden;
+
 }
  .ind {
                 background-color: back;
@@ -49,5 +51,13 @@ li {
     overflow-y: hidden;
 
 }
+
+
+@mixin tablet {
+    @media (min-width: 710px) {
+        @content
+    }
+}
+
 
 
